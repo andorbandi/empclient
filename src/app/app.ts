@@ -1,0 +1,12 @@
+import { Component, signal } from '@angular/core';
+import { EmpComponent } from './emp/emp.component';
+
+@Component({
+  imports: [EmpComponent],
+  selector: 'app-root',
+  styleUrl: './app.css',
+  templateUrl: './app.html',
+})
+export class App {
+  protected readonly title = signal('empclient');
+}
