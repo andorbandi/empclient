@@ -73,6 +73,16 @@
                     <td>{{emp.name}}</td>
                     <td>{{emp.city}}</td>
                     <td>{{emp.salary}}</td>
+                    <td>
+                      <button class="btn btn-danger" (click)="deleteEmployee(emp.id)">
+                        <i class="bi bi-trash"></i>
+                      </button>
+                    </td>
+                    <td>
+                      <button class="btn btn-secondary" (click)="editEmployee()">
+                        <i class="bi bi-pencil"></i>
+                      </button>
+                    </td>
                 </tr>
             }
         </tbody>

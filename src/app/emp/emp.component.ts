@@ -103,4 +103,19 @@ export class EmpComponent {
     console.log('Frissítés')
     console.log(this.empForm.value)
   }
+  editEmployee() {}
+
+  deleteEmployee(id: number) {
+    console.log('Törlés')
+    console.log('id:', id)
+    this.employeeApi.deleteEmployee(id).subscribe({
+      next: (res:any) => {
+        console.log(res)
+        this.getEmployees()
+      },
+      error: (err) => {
+        console.log(err)
+      }
+    })
+  }
 }
